@@ -34,12 +34,13 @@ class Create extends Action
      */
     public function execute()
     {
-        echo 'kol';
-        $data = $this->getRequest();
-
-        var_dump($data);
         $resultPage = $this->_resultPageFactory->create();
         return $resultPage;
+
+    }
+
+    public function createPost(){
+        return $var = $this->getRequest()->getParams();
     }
 }
 
