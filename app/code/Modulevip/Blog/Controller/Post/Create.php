@@ -7,9 +7,6 @@ use \Magento\Framework\App\Action\Context;
 use \Magento\Framework\View\Result\Page;
 use \Magento\Framework\View\Result\PageFactory;
 
-use Magento\Framework\App\Request\DataPersistorInterface;
-use Magento\Framework\App\ObjectManager;
-
 class Create extends Action
 {
     /**

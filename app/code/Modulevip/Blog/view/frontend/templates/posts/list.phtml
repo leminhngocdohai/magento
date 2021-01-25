@@ -58,9 +58,15 @@ echo $block->sayHello();
     <td><?php echo $post->getCreatedAt(); ?></td>
     <td>
         <a class="edit" href="<?php echo $block->getPostUrl($post);?>" target="_blank">Edit</a>
-        <a class="delete" href="#delete" target="_blank">Delete</a>
+        <a onclick='return confirmDel()' class="delete" href="<?php echo $block->getDelPostUrl($post);?>">Delete</a>
     </td>
   </tr>
   <?php endforeach; ?>
 </table>
 
+
+<script>
+        function confirmDel() {
+            return confirm("Đồng ý xóa ?");
+        }
+</script>

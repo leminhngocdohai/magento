@@ -6,15 +6,20 @@ echo $block->alo();
 
 <h2>Add Post Forms</h2>
 
-<form action="/blog/post/create" method="POST">
+<form action="/blog/post/save" method="POST">
 
-  <label for="fname">Title : </label><br>
-  <input type="text" name="title" value=""><br>
+    <div class="form-group">
+        <label for="name">Title : </label>
+        <input type="text" class="form-control" name="title">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="phone">Content :</label>
+        <input type="text" class="form-control" name="content">
+    </div>
+    <br>
 
-  <label for="lname">Content :</label><br>
-  <input type="text" name="content" value=""><br><br>
-
-  <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+  <button type="submit" name="createbtn" class="btn btn-primary" >Submit</button>
 
 </form>
 

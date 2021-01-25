@@ -1,14 +1,22 @@
 
 <h2>Edit Post Forms</h2>
 
-<form action="" method="post">
+<form action="/blog/post/save" method="POST">
+    <input type="hidden" name="id" value="<?php echo $block->getPost()->getId(); ?>">
 
-  <label for="title">Title : </label><br>
-  <input type="text" name="title" value="<?php echo $block->getPost()->getTitle(); ?>"><br>
+    <div class="form-group">
+        <label for="name">Title : </label>
+        <input type="text" class="form-control" value="<?php echo $block->getPost()->getTitle(); ?>" name="title">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="phone">Content :</label>
+        <input type="text" class="form-control" value="<?php echo $block->getPost()->getContent(); ?>" name="content">
+    </div>
+    <br>
 
-  <label for="content">Content :</label><br>
-  <input type="text" name="content" value="<?php echo $block->getPost()->getContent(); ?>"><br><br>
+  <button type="submit" name="editbtn" class="btn btn-primary">Submit</button>
 
 </form>
 
-<button type="submit" class="btn btn-primary" form="form1" value="Submit">Submit</button>
+

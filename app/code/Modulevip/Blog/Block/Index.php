@@ -60,6 +60,12 @@ class Index extends Template
         return '/blog/post/edit/id/' . $post->getId();
     }
 
+    public function getDelPostUrl(
+        Post $post
+    ) {
+        return '/blog/post/delete/id/' . $post->getId();
+    }
+
     /**
      * For a given post, returns its url
      * @return string
