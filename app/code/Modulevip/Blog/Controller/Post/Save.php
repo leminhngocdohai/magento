@@ -16,7 +16,6 @@ class Save extends Action
 	protected $resultRedirect;
 
     private $_cacheTypeList;
-
     private $_cacheFrontendPool;
 
 
@@ -36,11 +35,14 @@ class Save extends Action
     public function execute() {
         $post = $this->_postFactory->create();
 
+        /* Create */
         if (isset($_POST['createbtn'])) {
 			$post->setTitle($_POST['title']);
 			$post->setContent($_POST['content']);
 			$post->setCreatedAt(date('Y-m-d H:i:s'));
-        } elseif (isset($_POST['editbtn'])) {
+        }
+        /* Edit */
+        elseif (isset($_POST['editbtn'])) {
 			$post->setId($_POST['id']);
 			$post->setTitle($_POST['title']);
             $post->setContent($_POST['content']);
